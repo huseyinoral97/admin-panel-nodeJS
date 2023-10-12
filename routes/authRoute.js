@@ -7,4 +7,4 @@ router.post("/signUp", signUp);
 router.post("/signIn", signIn);
 router.post("/refresh-token", refreshToken);
 
-export default router
+export default router;

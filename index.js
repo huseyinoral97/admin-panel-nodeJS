@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import authRoute from "./routes/authRoute.js";
+import categoryRoute from "./routes/categoryRoute.js";
 
 dotenv.config(); // dotenv modülünü yükleyin ve konfigüre edin
 
@@ -26,6 +27,7 @@ connectDB(); // MongoDB'ye bağlan
 
 // Routes
 app.use("/api/auth", authRoute);
+app.use("/api/category", categoryRoute);
 
 app.listen(port, () => {
     console.log(`Sunucu ${port} portunda çalışıyor.`);
